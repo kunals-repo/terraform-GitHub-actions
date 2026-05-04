@@ -1,57 +1,63 @@
-**🚀 Azure Storage Deployment using Terraform & GitHub Actions**
-
-📌 Project Overview
-This mini-project demonstrates how to automate the deployment of Azure resources using a CI/CD pipeline.
-We successfully deployed 3 Azure Storage Accounts using Terraform, integrated with a GitHub Actions pipeline.
-
-The pipeline is triggered automatically whenever changes are pushed to the main.tf file, enabling seamless infrastructure deployment.
+**🚀 Azure Storage Deployment using Terraform & GitHub Actions (Self-Hosted Runner)**
 
 
-🧰 Tools & Technologies Used
+**📌 Project Overview**
+This project demonstrates an end-to-end CI/CD pipeline to deploy Azure infrastructure using Terraform integrated with GitHub Actions.
+
+We deployed 3 Azure Storage Accounts automatically by triggering a pipeline when changes are pushed to the main.tf terraform file.
+The pipeline runs on a self-hosted runner, providing better control, security, and execution within our own environment.
+
+**🧰 Tools & Technologies Used**
 Git – Version control system
-GitHub – Code repository & pipeline hosting
-Terraform – Infrastructure as Code (IaC) tool
-GitHub Actions – CI/CD automation tool
-Microsoft Azure – Cloud platform for resource deployment
+GitHub – Repository and CI/CD pipeline management
+Terraform – Infrastructure as Code (IaC) for Azure resources
+GitHub Actions – Automation for CI/CD workflows
+Microsoft Azure – Cloud platform
+Self-Hosted Runner – Custom runner to execute pipeline jobs
 
 
-⚙️ CI/CD Pipeline Workflow
-Developer writes or updates Terraform code (main.tf)
+**⚙️ CI/CD Pipeline Workflow**
+Writes terraform code main.tf and variables.tf
 Code is pushed to the GitHub repository
 GitHub Actions pipeline is triggered automatically
-Pipeline performs:
-Code checkout
-Terraform initialization (terraform init)
-Terraform planning (terraform plan)
-Terraform deployment (terraform apply)
-Azure resources (3 Storage Accounts) are created/updated successfully
+Pipeline runs on a self-hosted runner
+Workflow executes the following steps:
+Checkout source code
+Setup Terraform environment
+Authenticate with Azure
+Run terraform init
+Run terraform plan
+Run terraform apply
+Azure resources (3 Storage Accounts) are created
 
 
-✅ Advantages of This Approach
+**✅ Advantages of This Approach**
 
-**🔹 Automation**
-Eliminates manual deployment steps
-Ensures faster and consistent infrastructure provisioning
+🔹 Automation
+Fully automated infrastructure deployment
+No manual intervention required
 
-**🔹 Consistency**
-Same infrastructure is created every time
-Reduces human errors
+🔹 Security
+Self-hosted runner runs inside controlled environment
+Secure access to Azure resources
 
-**🔹 Version Control**
-All infrastructure changes are tracked using Git
+🔹 Consistency
+Same infrastructure setup every time
+Eliminates configuration drift
+
+🔹 Version Control
+Infrastructure changes tracked using Git
 Easy rollback and audit
 
-**🔹 Scalability**
-Easily extend to deploy more resources
-Supports multi-environment deployments
+🔹 Scalability
+Easily extendable to multiple environments (Dev, Test, Prod)
 
-**🔹 Integration**
-Seamless integration between Git, Terraform, Azure, and CI/CD pipeline
-
-
+🔹 Flexibility
+Custom runner configuration
+Control over tools, dependencies, and execution
 
 🧠 Key Learnings
-How to integrate Terraform with GitHub Actions
-Automating Azure resource deployment
-Managing infrastructure using code
-Building real-world CI/CD pipelines
+Integration of Terraform with GitHub Actions
+Setting up and using a self-hosted runner
+Automating Azure deployments using CI/CD
+Managing infrastructure using Infrastructure as Code
