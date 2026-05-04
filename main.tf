@@ -1,5 +1,5 @@
 
 resource "azurerm_resource_group" "rg-block" {
-  name     = "rg2"
+  name     = "rg3"
   location = "West US 2"
 }
