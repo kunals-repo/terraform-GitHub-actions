@@ -28,20 +28,26 @@ Azure resources (3 Storage Accounts) are created/updated successfully
 
 
 ✅ Advantages of This Approach
+
 **🔹 Automation**
 Eliminates manual deployment steps
 Ensures faster and consistent infrastructure provisioning
+
 **🔹 Consistency**
 Same infrastructure is created every time
 Reduces human errors
+
 **🔹 Version Control**
 All infrastructure changes are tracked using Git
 Easy rollback and audit
+
 **🔹 Scalability**
 Easily extend to deploy more resources
 Supports multi-environment deployments
+
 **🔹 Integration**
 Seamless integration between Git, Terraform, Azure, and CI/CD pipeline
+
 
 
 🧠 Key Learnings
