@@ -6,11 +6,13 @@ resource "azurerm_resource_group" "rg-block" {
 
 
 resource "azurerm_storage_account" "storage-block" {
-  name                     = "bmwacct0405"
+for_each = var.storage-acct
+  name                     = each.value.name
   resource_group_name      = azurerm_resource_group.rg-block.name
   location                 = azurerm_resource_group.rg-block.location
   account_tier             = "Premium"
-  account_replication_type = "LRS"
-  account_kind             = "BlockBlobStorage"
+  account_replication_type = each.value.replication
+  account_kind             = "StorageV2"
+  tags = { "owner" = "kunal yeole" }
 
 }
