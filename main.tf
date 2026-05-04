@@ -1,7 +1,7 @@
 
 resource "azurerm_resource_group" "rg-block" {
   name     = "three-windows-VMs"
-  location = "centralus"
+  location = "eastus"
 }
 
 
