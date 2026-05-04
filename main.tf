@@ -1,6 +1,6 @@
 
 resource "azurerm_resource_group" "rg-block" {
-  name     = "WindowsVMs-rg"
+  name     = "Windows-VMs-rg"
   location = "southindia"
 }
 
