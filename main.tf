@@ -1,7 +1,7 @@
 
 resource "azurerm_resource_group" "rg-block" {
-  name     = "VMs-rg"
-  location = "southindia"
+  name     = "three-windows-VMs"
+  location = "centralus"
 }
 
 
