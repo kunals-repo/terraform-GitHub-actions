@@ -9,26 +9,44 @@ The pipeline runs on a self-hosted runner, providing better control, security, a
 
 **🧰 Tools & Technologies Used**
 Git – Version control system
+
 GitHub – Repository and CI/CD pipeline management
+
 Terraform – Infrastructure as Code (IaC) for Azure resources
+
 GitHub Actions – Automation for CI/CD workflows
+
 Microsoft Azure – Cloud platform
+
 Self-Hosted Runner – Custom runner to execute pipeline jobs
 
 
+
 **⚙️ CI/CD Pipeline Workflow**
+
 Writes terraform code main.tf and variables.tf
+
 Code is pushed to the GitHub repository
+
 GitHub Actions pipeline is triggered automatically
+
 Pipeline runs on a self-hosted runner
+
 Workflow executes the following steps:
 Checkout source code
+
 Setup Terraform environment
+
 Authenticate with Azure
+
 Run terraform init
+
 Run terraform plan
+
 Run terraform apply
+
 Azure resources (3 Storage Accounts) are created
+
 
 
 **✅ Advantages of This Approach**
